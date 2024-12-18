@@ -1,14 +1,14 @@
-* {
-  /* text-align: center; */
-}
-body {
+/* * {
+  text-align: center;
+} */
+/* body { */
   /* border: solid yellow 1px; */
   /* background-color: black;
   background-image: url(/images/code.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; */
-}
+/* } */
 
 li {
    list-style: none;
