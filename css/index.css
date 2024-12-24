@@ -32,6 +32,8 @@ h2 {
   color: #f103a2;
 }
 p {
+  padding: 5px;
+  background-color: hsla(0, 100%, 1%, 0.571);
   width: 50vw;
   color: #ff1493;
 }
@@ -61,7 +63,7 @@ ul {
 svg {
   width: 32px;
 }
-a {
+.socialMedia {
   border-radius: 50%;
   background-color: white;
   padding: 10px;
