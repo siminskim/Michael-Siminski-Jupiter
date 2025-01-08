@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 body {
+  min-width: 360px;
   margin: 0;
   padding: 0;
   background-image: url(/images/code.jpg);
@@ -10,26 +11,31 @@ body {
   background-attachment: fixed;
 }
 #navbar{
-  background-color: darkgray;
+  font-size: 15px;
+  /* background-color: rgb(11, 155, 59); */
   position: sticky;
   top:0;
-  height: 50px;
+  height: 52px;
 }
+
+
+
 .navbar-links{
+  /* background-color: #f103a2; */
   height:50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .navbar-links li{
   list-style: none;
 }
 .navbar-links li a{
+  background-color: #f103a2;
   text-decoration: none;
   padding: 5px;
   margin-left: 10px;
   color:black;
-  background-color: white;
   border-radius: 5px
 }
 
@@ -50,9 +56,11 @@ h1 {
   font-family: 'Lavishly Yours', cursive;
   font-weight: 500;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 20px;
+
 }
 h2 {
+  font-size: 15px;
   border-radius: 50px;
   padding: 1px 5px;
   background-color: black;
@@ -62,7 +70,7 @@ h2 {
 p {
   padding: 5px;
   background-color: hsla(0, 100%, 1%, 0.571);
-  width: 50vw;
+  width: 95vw;
   color: #ff1493;
 }
 section {
@@ -107,3 +115,38 @@ svg {
 .hidden{
   display: none;
 }
+
+
+
+@media (width > 600px){
+
+body{
+  background-color: #f103a2;
+}
+#navbar{
+  font-size: 20px;
+  /* background-color: rgb(11, 155, 59); */
+  position: sticky;
+  top:0;
+  height: 50px;
+}
+.navbar-links{
+  justify-content: center;
+}
+h1 {
+  color: blue;
+  font-size: 30px;
+}
+h2{
+  color: yellow;
+  font-size: 20px;
+}
+p{
+  width: 70vw;
+  color: white;
+  font-size: 16px;
+}
+
+} /*end of <= media query */
+
+/* Mobile - 360px starting point Mobile landscape - 568px, and 666px Smallest tablet - 768px Large tablets - 1024px Regular desktop - 1300px  */
