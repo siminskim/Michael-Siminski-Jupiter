@@ -6,6 +6,7 @@ let today = new Date()
 console.log(today)
 let thisYear = today.getFullYear()
 console.log(thisYear)
+let a = 'something'
 
 // document.body.appendChild(footer).textContent('hello')
 // document.querySelector('footer').textContent = 'hello'
