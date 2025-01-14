@@ -86,6 +86,8 @@ svg {
 svg:hover{
   background-color:#57f6fc;
 }
-/* .social-links{
-  background-color: blue;
-} */
+footer{
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+}
