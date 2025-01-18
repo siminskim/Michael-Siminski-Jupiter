@@ -7,10 +7,11 @@ body {
   min-width: 360px;
   margin: 0;
   padding: 0;
-  background-image: url(/images/code.jpg);
+  background-color: cornflowerblue;
+  /* background-image: url(/images/code.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 #links-container {
   display: flex;
@@ -34,9 +35,9 @@ body {
   height: 30px;
   border-bottom: solid black 1px;
 }
-.experience-header{
+/* .experience-header{
   margin: 0px;
-}
+} */
 h1 {
   margin: 20px auto;
   width: fit-content;
@@ -59,13 +60,12 @@ h2{
   align-items: center;
 }
 
-.sections {
+section {
   color: white;
   text-align: center;
   margin: 20px;
   display: flex;
   justify-content: center;
-  /* background-color: skyblue; */
   flex-direction: column;
 }
 ul {

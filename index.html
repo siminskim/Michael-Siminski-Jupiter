@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="Author" content="Michael Lukas Siminski" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="./Smiley.png"/>
+    <link rel="icon" type="image/png" href="./Smiley.png" />
     <link href="./css/index.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-
   </head>
   <body>
     <navbar id="navbar">
@@ -22,6 +21,7 @@
         <a class="links" href="#projects">Projects</a>
         <a class="links" href="#about">About</a>
         <a class="links" href="#experience">Experience</a>
+        <a class="links" href="#user-info">Leave a Message</a>
         <a class="links" href="#connect">Connect</a>
       </div>
     </navbar>
@@ -30,7 +30,7 @@
     <main>
       <h1 class="author">Michael Siminski</h1>
       <!-- start of div that contains all five sections-->
-      <div class="main-container">
+      <div class="section-container">
         <!-- start of projects section -->
         <section class="sections" id="Projects">
           <h2>Projects</h2>
@@ -57,7 +57,7 @@
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
-            <h2>JavaScript from beginner to advanced</h2>
+            <h3>JavaScript from beginner to advanced</h3>
             <li>Data types</li>
             <li>Arrays</li>
             <li>Objects</li>
@@ -119,8 +119,26 @@
           <!-- end of social links div -->
         </section>
         <!-- end of connect section -->
-        <!-- end of main-container -->
-      </div>
+        <!-- end of section-container -->
+      <section>
+        <h2>Leave a message</h2>
+        <form action="" method="get" id="user-info">
+          <!-- start of input for name -->
+          <label for="userName">User Name</label>
+          <input type="text" name="userName" id="userName" required placeholder="Enter Name" /> <br>
+          <!-- end of input for name -->
+          <!-- start of input for email -->
+          <label for="userEmail">User Email</label>
+          <input type="userEmail" placeholder="Enter Email" required name="userEmail" id="userEmail" /> <br>
+          <!-- end of input for email -->
+           <!--start of text area -->
+           <textarea name="message" id="message"></textarea>
+           <!--end of text area -->
+           <button type="submit" >Submit</button>
+        </form>
+      </section>
+    </div>
+
     </main>
     <script src="js/index.js"></script>
     <script
