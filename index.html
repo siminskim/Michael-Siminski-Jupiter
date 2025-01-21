@@ -23,6 +23,7 @@
         <a class="links" href="#experience">Experience</a>
         <a class="links" href="#user-info">Leave a Message</a>
         <a class="links" href="#connect">Connect</a>
+        <a class="links" href="#leave-message">Leave A Message</a>
       </div>
     </navbar>
     <!-- end of navbar
@@ -119,26 +120,42 @@
           <!-- end of social links div -->
         </section>
         <!-- end of connect section -->
-        <!-- end of section-container -->
-      <section>
-        <h2>Leave a message</h2>
-        <form action="" method="get" id="user-info">
-          <!-- start of input for name -->
-          <label for="userName">User Name</label>
-          <input type="text" name="userName" id="userName" required placeholder="Enter Name" /> <br>
-          <!-- end of input for name -->
-          <!-- start of input for email -->
-          <label for="userEmail">User Email</label>
-          <input type="userEmail" placeholder="Enter Email" required name="userEmail" id="userEmail" /> <br>
-          <!-- end of input for email -->
-           <!--start of text area -->
-           <textarea name="message" id="message"></textarea>
-           <!--end of text area -->
-           <button type="submit" >Submit</button>
-        </form>
-      </section>
-    </div>
-
+        <!-- stat of section for form -->
+        <section>
+          <h2>Leave a message</h2>
+          <form action="" method="get" id="leave_message">
+            <!-- start of input for name -->
+            <label for="userName">User Name</label>
+            <input type="text" name="userName" id="userName" required placeholder="Enter Name"
+            />
+            <br />
+            <!-- end of input for name -->
+            <!-- start of input for email -->
+            <label for="userEmail">User Email</label>
+            <input
+              type="userEmail"
+              placeholder="Enter Email"
+              required
+              name="userEmail"
+              id="userEmail"
+            />
+            <br />
+            <!-- end of input for email -->
+            <!--start of text area -->
+            <textarea name="message" id="message"></textarea>
+            <!--end of text area -->
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+        <!-- end of section for form -->
+        <!-- start of section for message -->
+        <section id="messages">
+          <h2>Messages</h2>
+          <ul></ul>
+        </section>
+        <!-- end of section for message -->
+      </div>
+      <!-- end of container for sections -->
     </main>
     <script src="js/index.js"></script>
     <script

@@ -21,7 +21,7 @@ body {
 }
 .links:hover {
   background-color: #454569;
-  color:#4ccef4;
+  color: #4ccef4;
   font-size: 25px;
 }
 
@@ -50,9 +50,8 @@ h1 {
   color: white;
   text-align: center;
 }
-h2{
+h2 {
   text-decoration: double;
-
 }
 .main-container {
   display: flex;
@@ -83,11 +82,25 @@ svg {
   background-color: white;
   height: 50px;
 }
-svg:hover{
-  background-color:#57f6fc;
+svg:hover {
+  background-color: #57f6fc;
 }
-footer{
+footer {
   color: white;
   text-align: center;
   margin-bottom: 15px;
 }
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: red;
+  }
+  #links-container{
+    flex-direction: row;
+
+  }
+  .links{
+    height: 60px;
+    margin: 5px;
+  }
+  } /* todo end of meadia break point for min-width 768 */
+
