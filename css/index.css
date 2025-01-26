@@ -3,28 +3,39 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+:root {
+  --h1: #ff810a;
+  --dark: #cc6300;
+  --light: #ffa047;
+  --electric: #054a91;
+  --tufts: #1a8fe3;
+  --darkContrast: #0d21a1;
+  --lightContrast: #687bf3;
+}
+
 body {
   min-width: 360px;
   margin: 0;
   padding: 0;
-  background-color: cornflowerblue;
-  background-image: url(/images/sky2.jpg);
+  background-color: var(--tufts);
+  /* background-image: url(/images/sky2.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 main {
   padding: 15px;
 }
 #links-container {
   display: flex;
-  background-color: #4ccef4;
+  background-color: var(--dark);
   justify-content: space-evenly;
   flex-direction: column;
 }
 .links:hover {
-  background-color: #454569;
-  color: #4ccef4;
+  background-color: var(--tufts);
+  /* color: var(--darkContrast); */
   font-size: 25px;
 }
 
@@ -32,7 +43,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #454569;
+  color: var(--darkContrast);
   width: 100vw;
   text-decoration: none;
   height: 30px;
@@ -41,16 +52,15 @@ main {
 h1 {
   margin: 20px auto;
   width: fit-content;
-  background-color: black;
-  border-radius: 10px;
-  padding: 10px;
+  background-color: white;
+  /* border-radius: 10px; */
+  padding-left: 5px;
+  padding-right: 5px;
   font-family: "Lavishly Yours", cursive;
-  font-weight: 500;
-  font-style: normal;
-  color: white;
-  text-align: center;
+  color: var(--h1);
 }
 h2 {
+  color: var(--darkContrast);
   margin-top: 20px;
   /* margin: 25px 0px; */
 }
@@ -77,7 +87,7 @@ ul li p {
 #grid-container {
   /* padding: 0px 10px; */
   gap: 20px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: grid;
 }
 .date-description {
@@ -104,7 +114,10 @@ svg {
   height: 50px;
 }
 svg:hover {
-  background-color: #57f6fc;
+  background-color: var(--darkContrast);
+}
+.hidden {
+  display: none;
 }
 footer {
   color: white;
@@ -112,15 +125,19 @@ footer {
   margin-bottom: 15px;
 }
 @media only screen and (min-width: 768px) {
-  body {
-    background-color: red;
-  }
   #links-container {
+    background-color: var(--dark);
     flex-direction: row;
   }
   .links {
+    background-color: var(--light);
+    border-radius: 3px;
     height: 60px;
-    margin: 5px;
+    margin: 2px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 40px;
   }
   #grid-container {
     display: grid;

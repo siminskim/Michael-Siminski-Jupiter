@@ -173,7 +173,7 @@
         <!-- stat of section for form -->
         <section>
           <h2>Leave a message</h2>
-          <form action="" method="get" id="leave_message">
+          <form action="" method="get" name="leave_message">
             <!-- start of input for name -->
             <label for="userName">User Name</label>
             <input
@@ -188,7 +188,7 @@
             <!-- start of input for email -->
             <label for="userEmail">User Email</label>
             <input
-              type="userEmail"
+              type="email"
               placeholder="Enter Email"
               required
               name="userEmail"
@@ -197,19 +197,20 @@
             <br />
             <!-- end of input for email -->
             <!--start of text area -->
-            <textarea name="message" id="message"></textarea>
+            <textarea name="message" id="message" required></textarea>
             <!--end of text area -->
             <button type="submit">Submit</button>
           </form>
         </section>
         <!-- end of section for form -->
         <!-- start of section for message -->
-        <section id="messages">
+        <section id="messages" class="hidden">
           <h2>Messages</h2>
           <ul></ul>
         </section>
         <!-- end of section for message -->
       </div>
+
       <!-- end of container for sections -->
     </main>
     <script src="js/index.js"></script>

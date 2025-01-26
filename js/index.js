@@ -1,4 +1,3 @@
-console.log("hello");
 // creating footer element to be appended to body
 let footer = document.createElement("footer");
 // put body element in a variable
@@ -23,10 +22,11 @@ for (let i = 0; i <= skills.length - 1; i++) {
 }
 
 // let messageForm = document.getElementsByName('leave_message')
-let messageForm = document.getElementById("leave_message");
+let messageForm = document.querySelector("[name='leave_message']");
+
 messageForm.addEventListener("submit", handleFormData);
 function handleFormData(e) {
-  // ! Dont' forget the console.log()
+  // ! Dont' forget to remove the console.log()
   e.preventDefault();
   let userName = e.target.userName.value;
   console.log(userName);
@@ -38,11 +38,14 @@ function handleFormData(e) {
 }
 
 function displayMessage(message, email, userName) {
-  // unorderd list to put li in
-  let unorderedList = document.querySelector();
-  let listItem = document.createElement("li");
-  console.log(message + "in scope");
-}
+  let messageSection = document.getElementById("messages");
+  let messageList = messageSection.querySelector("ul");
+  let newMessage = document.createElement("li");
+  messageSection.classList.remove("hidden");
+  newMessage.innerHTML = `<a href="mailto:${email}"> ${userName} </a><span>wrote: ${message}</span>`;
+
+  let removeButton = messageList.appendChild(newMessage);
+} //end of display message function
 
 //   ! uncomment when done----------------------------
 // messageForm.reset()
