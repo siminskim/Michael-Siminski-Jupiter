@@ -171,33 +171,37 @@
         </section>
         <!-- end of connect section -->
         <!-- stat of section for form -->
-        <section>
+        <section id="form-section">
           <h2>Leave a message</h2>
           <form action="" method="get" name="leave_message">
             <!-- start of input for name -->
-            <label for="userName">User Name</label>
-            <input
-              type="text"
-              name="userName"
-              id="userName"
-              required
-              placeholder="Enter Name"
-            />
-            <br />
+            <div>
+              <label for="userName">User Name</label>
+              <input
+                type="text"
+                name="userName"
+                id="userName"
+                required
+                placeholder="Enter Name"
+              />
+            </div>
             <!-- end of input for name -->
             <!-- start of input for email -->
-            <label for="userEmail">User Email</label>
-            <input
-              type="email"
-              placeholder="Enter Email"
-              required
-              name="userEmail"
-              id="userEmail"
-            />
-            <br />
+            <div>
+              <label for="userEmail">User Email</label>
+              <input
+                type="email"
+                placeholder="Enter Email"
+                required
+                name="userEmail"
+                id="userEmail"
+              />
+            </div>
             <!-- end of input for email -->
             <!--start of text area -->
-            <textarea name="message" id="message" required></textarea>
+            <div>
+              <textarea name="message" id="message" required></textarea>
+            </div>
             <!--end of text area -->
             <button type="submit">Submit</button>
           </form>

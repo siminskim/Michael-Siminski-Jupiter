@@ -27,6 +27,27 @@ body {
 main {
   padding: 15px;
 }
+a {
+  letter-spacing: 2px;
+}
+input[type="text"],
+input[type="email"] {
+  margin-bottom: 15px;
+  padding: 5px;
+  border: solid 2px var(--dark);
+  background: var(--light);
+  color: white;
+}
+button {
+  margin: 0px 5px;
+  border-radius: 5px;
+  border: solid 4px var(--darkContrast);
+  background-color: var(--dark);
+  padding: 3px;
+}
+.message-a {
+  color: #cc6300;
+}
 #links-container {
   display: flex;
   background-color: var(--dark);
@@ -58,6 +79,7 @@ h1 {
   padding-right: 5px;
   font-family: "Lavishly Yours", cursive;
   color: var(--h1);
+  letter-spacing: 10px;
 }
 h2 {
   color: var(--darkContrast);
@@ -73,7 +95,7 @@ h3 {
   margin-top: 10px;
 }
 
-section {
+.sections {
   /* padding: 0px 3px 0px 3px; */
   color: white;
   text-align: center;
@@ -116,8 +138,25 @@ svg {
 svg:hover {
   background-color: var(--darkContrast);
 }
+#form-section {
+  height: 260px;
+  border: 3px solid aliceblue;
+  text-align: center;
+}
+textarea {
+  /* todo */
+  margin-bottom: 15px;
+  padding: 5px;
+  border: solid 2px var(--dark);
+  background: var(--light);
+  color: white;
+  width: 238px;
+}
 .hidden {
   display: none;
+}
+#messages {
+  text-align: center;
 }
 footer {
   color: white;
@@ -128,12 +167,14 @@ footer {
   #links-container {
     background-color: var(--dark);
     flex-direction: row;
+    justify-content: center;
   }
   .links {
     background-color: var(--light);
     border-radius: 3px;
-    height: 60px;
-    margin: 2px;
+    width: 145px;
+    height: 40px;
+    margin: 5px;
     text-align: center;
   }
   h1 {
