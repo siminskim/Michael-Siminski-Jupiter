@@ -17,7 +17,7 @@ body.appendChild(footer);
 footer.appendChild(copyright);
 
 // array of my skills
-let skills = ["HTML", "CSS", "GitHub", "Affinity Design", "JavaScript"];
+let skills = ["Affinity Design", "JavaScript", "GitHub", "HTML", "CSS"];
 // setting variable to skillsList id
 let skillsList = document.getElementById("skillsList");
 
@@ -29,6 +29,7 @@ for (let i = 0; i <= skills.length - 1; i++) {
 
 let messageForm = document.querySelector("[name='leave_message']");
 messageForm.addEventListener("submit", handleFormData);
+
 function handleFormData(e) {
   // ! Dont' forget to remove the console.log()
   e.preventDefault();
