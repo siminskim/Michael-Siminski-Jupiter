@@ -31,7 +31,6 @@ let messageForm = document.querySelector("[name='leave_message']");
 messageForm.addEventListener("submit", handleFormData);
 
 function handleFormData(e) {
-  // ! Dont' forget to remove the console.log()
   e.preventDefault();
   //hide button to prevent user from adding another input
   document.querySelector("[type='submit']").classList.add("hidden");
@@ -54,7 +53,6 @@ function displayMessage(message, email, userName) {
   let removeButton = document.createElement("button");
   removeButton.innerText = "Remove";
   removeButton.type = "button";
-  // removeButton.className = "message-li";
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
 
@@ -63,8 +61,6 @@ function displayMessage(message, email, userName) {
     entry.remove();
     document.getElementById("messages").classList.add("hidden");
     document.querySelector("[type='submit']").classList.remove("hidden");
-    // messageForm.reset();
+    messageForm.reset();
   });
 } //end of display message function
-
-//   ! uncomment when done----------------------------
