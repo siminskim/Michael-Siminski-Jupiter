@@ -29,6 +29,7 @@ main {
 }
 a {
   letter-spacing: 2px;
+  text-decoration-line: none;
 }
 textarea {
   /* todo */
