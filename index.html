@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="Author" content="Michael Lukas Siminski" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="./Smiley.png"/>
+    <link rel="icon" type="image/png" href="./Smiley.png" />
     <link href="./css/index.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,29 +13,44 @@
       href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-
   </head>
   <body>
     <navbar id="navbar">
-      <div id="links-container">
-        <a class="links" href="#skills">Skills</a>
-        <a class="links" href="#projects">Projects</a>
-        <a class="links" href="#about">About</a>
-        <a class="links" href="#experience">Experience</a>
-        <a class="links" href="#connect">Connect</a>
-      </div>
+      <div id="navImg"></div>
+      <ul id="links-container">
+        <li>
+          <a class="links" href="#skills">Skills</a>
+        </li>
+        <li>
+          <a class="links" href="#projects">Projects</a>
+        </li>
+        <li>
+          <a class="links" href="#about">About</a>
+        </li>
+        <li>
+          <a class="links" href="#experience">Experience</a>
+        </li>
+        <li>
+          <a class="links" href="#user-info">Leave a Message</a>
+        </li>
+        <li>
+          <a class="links" href="#connect">Connect</a>
+        </li>
+        <!-- <a class="links" href="#leave-message">Leave A Message</a> -->
+      </ul>
     </navbar>
     <!-- end of navbar
     -->
     <main>
       <h1 class="author">Michael Siminski</h1>
       <!-- start of div that contains all five sections-->
-      <div class="main-container">
+      <div class="section-container">
         <!-- start of projects section -->
-        <section class="sections" id="Projects">
+        <section class="sections" id="projects">
           <h2>Projects</h2>
         </section>
         <!-- end of projects section -->
+
         <!-- start of about section -->
         <section class="sections" id="about">
           <h2>About</h2>
@@ -48,24 +63,73 @@
             developer.
           </p>
         </section>
-        <!-- end of ablout section -->
+        <!-- end of about section -->
+        <!-- todo this is the new experience section -->
         <!-- start of experience section -->
         <section class="sections" id="experience">
           <h2 class="experience-header">Experience</h2>
-          <ul>
-            <h3>Web development</h3>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <h2>JavaScript from beginner to advanced</h2>
-            <li>Data types</li>
-            <li>Arrays</li>
-            <li>Objects</li>
-            <li>Functions and scope</li>
-            <li>Loops, iteration and array methods</li>
-            <li>Document object model</li>
-            <li>Asynchronous functions</li>
-          </ul>
+          <div id="grid-container">
+            <div class="job-container firstGridBox">
+              <h3>United States Marine Corps</h3>
+              <ul>
+                <li class="date-description">
+                  Dates: January 2005-January 2011
+                </li>
+                <li class="date-description">Description:</li>
+                <ul>
+                  <li>
+                    <p>
+                      I started my career as a Marine as a 0351. I specialized
+                      in explosives and rockets. Because of my ability to learn,
+                      I was also able to cross-train as a machine gunner. I
+                      served in Fallujah, Iraq in 2006-2007, where we partroled
+                      the streets doing cool stuff.
+                    </p>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="job-container secondGridBox">
+              <h3>Like New Cleaning</h3>
+              <ul>
+                <li class="date-description">
+                  Dates: January 2005-January 2011
+                </li>
+                <li class="date-description">Description:</li>
+                <ul>
+                  <li>
+                    <p>
+                      I started my career as a Marine as a 0351. I specialized
+                      in explosives and rockets. Because of my ability to learn,
+                      I was also able to cross-train as a machine gunner. I
+                      served in Fallujah, Iraq in 2006-2007, where we partroled
+                      the streets doing cool stuff.
+                    </p>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="job-container thridGridBox">
+              <h3>Ministry</h3>
+              <ul>
+                <li class="date-description">
+                  Dates: January 2005-January 2011
+                </li>
+                <li class="date-description">Description:</li>
+                <ul>
+                  <li>
+                    <p>
+                      I started my career as a Marine as a 0351. I specialized
+                      in explosives and rockets. Because of my ability to learn,
+                      I was also able to cross-train as a machine gunner. I
+                      served in Fallujah, Iraq in 2006-2007, where we partroled
+                      the streets doing cool stuff.
+                    </p>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
         </section>
         <!-- end of experience section -->
         <!-- start of skills section-->
@@ -119,10 +183,54 @@
           <!-- end of social links div -->
         </section>
         <!-- end of connect section -->
-        <!-- end of main-container -->
+        <!-- stat of section for form -->
+        <section id="form-section">
+          <h2>Leave a message</h2>
+          <form action="" method="get" name="leave_message">
+            <!-- start of input for name -->
+            <div>
+              <label for="userName">User Name</label>
+              <input
+                type="text"
+                name="userName"
+                id="userName"
+                required
+                placeholder="Enter Name"
+              />
+            </div>
+            <!-- end of input for name -->
+            <!-- start of input for email -->
+            <div>
+              <label for="userEmail">User Email</label>
+              <input
+                type="email"
+                placeholder="Enter Email"
+                required
+                name="userEmail"
+                id="userEmail"
+              />
+            </div>
+            <!-- end of input for email -->
+            <!--start of text area -->
+            <div>
+              <textarea name="message" id="message" required></textarea>
+            </div>
+            <!--end of text area -->
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+        <!-- end of section for form -->
+        <!-- start of section for message -->
+        <section id="messages" class="hidden">
+          <h2>Messages</h2>
+          <ul></ul>
+        </section>
+        <!-- end of section for message -->
       </div>
+
+      <!-- end of container for sections -->
     </main>
-    <script src="js/index.js"></script>
+    <script type="module" src="js/index.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
