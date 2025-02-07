@@ -65,3 +65,64 @@ function displayMessage(message, email, userName) {
     messageForm.reset();
   });
 } //end of display message function
+//! FETCH                                                               .
+
+// fetch("https://api.github.com/users/siminskim/repos")
+//   .then((response) => {
+//     if (response.ok) {
+//       return response.text();
+//     } else {
+//       throw new Error("Failed to fetch repositories");
+//     }
+//   })
+//   .then((data) => {
+//     const repositories = JSON.parse(data);
+//     console.log(repositories);
+//     const projectSection = document.getElementById("projects");
+//     let projectList = document.createElement("ul");
+//     projectSection.appendChild(projectList);
+
+//     for (let repo of repositories) {
+//       let projectLi = document.createElement("li");
+//       projectLi.innerText = repo.name;
+//       projectList.appendChild(projectLi);
+//     }
+//   });
+
+// fetch("https://api.github.com/users/siminskim/repos")
+//   .then((response) => {
+//     if (response.ok) {
+//       return response.json();
+//     } else {
+//       throw new Error("Failed to fetch repositories");
+//     }
+//   })
+//   .then((data) => {
+//     for (let i = 0; i <= data.length - 1; i++) {
+//       let projectSection = document.getElementById("projects");
+//       let projectListItem = document.createElement("li");
+//       projectListItem.textContent = data[i].name;
+//       projectSection.appendChild(projectListItem);
+//     }
+//   })
+//   .catch((error) => console.log(error));
+
+async function fetchData() {
+  try {
+    let response = await fetch("https://api.github.com/users/siminskim/repos");
+    // console.log(response);
+    if (response.ok) {
+      let data = await response.json();
+      let projectSection = document.getElementById("projects");
+      let projectList = document.createElement("ul");
+      projectSection.appendChild(projectList);
+      // for()
+      console.log(data);
+    } else {
+      throw new Error("Failed to fetch repositories");
+    }
+  } catch (error) {
+    console.log(error, "problem");
+  }
+}
+fetchData();
