@@ -65,30 +65,8 @@ function displayMessage(message, email, userName) {
     messageForm.reset();
   });
 } //end of display message function
-//! FETCH                                                               .
 
-// fetch("https://api.github.com/users/siminskim/repos")
-//   .then((response) => {
-//     if (response.ok) {
-//       return response.text();
-//     } else {
-//       throw new Error("Failed to fetch repositories");
-//     }
-//   })
-//   .then((data) => {
-//     const repositories = JSON.parse(data);
-//     console.log(repositories);
-//     const projectSection = document.getElementById("projects");
-//     let projectList = document.createElement("ul");
-//     projectSection.appendChild(projectList);
-
-//     for (let repo of repositories) {
-//       let projectLi = document.createElement("li");
-//       projectLi.innerText = repo.name;
-//       projectList.appendChild(projectLi);
-//     }
-//   });
-
+// using fetch with chaining .then()
 // fetch("https://api.github.com/users/siminskim/repos")
 //   .then((response) => {
 //     if (response.ok) {
@@ -106,23 +84,33 @@ function displayMessage(message, email, userName) {
 //     }
 //   })
 //   .catch((error) => console.log(error));
-
+// .!!!!! Same as above but with async and await
+//put globally so I use it ourside of the for of loop as well
+let projectSection = document.getElementById("projects");
+let errorMessageH3 = document.createElement("h3");
 async function fetchData() {
   try {
     let response = await fetch("https://api.github.com/users/siminskim/repos");
     // console.log(response);
     if (response.ok) {
-      let data = await response.json();
-      let projectSection = document.getElementById("projects");
+      let repositories = await response.json();
       let projectList = document.createElement("ul");
       projectSection.appendChild(projectList);
-      // for()
-      console.log(data);
+      for (let repository of repositories) {
+        let project = document.createElement("li");
+        project.innerText = repository.name;
+        projectList.appendChild(project);
+      }
     } else {
+      errorMessageH3.innerText =
+        "There was a problem retriving data. Please try again later";
+      projectSection.appendChild(errorMessageH3);
       throw new Error("Failed to fetch repositories");
     }
   } catch (error) {
-    console.log(error, "problem");
+    errorMessageH3.innerText = "Network error. Please try again later";
+    projectSection.appendChild(errorMessageH3);
+    console.log(error);
   }
 }
 fetchData();
