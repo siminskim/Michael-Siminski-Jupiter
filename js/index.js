@@ -48,7 +48,6 @@ function displayMessage(message, email, userName) {
   let messageList = messageSection.querySelector("ul");
   let newMessage = document.createElement("li");
   messageSection.classList.remove("hidden");
-  //! create element and appendChild instead of innerhtml
   newMessage.innerHTML = `<a class="message-a" href="mailto:${email}"> ${userName} </a><span>Wrote: ${message}</span>`;
 
   let removeButton = document.createElement("button");
