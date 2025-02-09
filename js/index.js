@@ -104,7 +104,7 @@ async function fetchData() {
       errorMessageH3.innerText =
         "There was a problem retriving data. Please try again later";
       projectSection.appendChild(errorMessageH3);
-      throw new Error("Failed to fetch repositories");
+      // throw new Error("Failed to fetch repositories");
     }
   } catch (error) {
     errorMessageH3.innerText = "Network error. Please try again later";
