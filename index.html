@@ -13,6 +13,17 @@
       href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <script defer type="module" src="js/index.js"></script>
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <navbar id="navbar">
@@ -31,7 +42,7 @@
           <a class="links" href="#experience">Experience</a>
         </li>
         <li>
-          <a class="links" href="#user-info">Leave a Message</a>
+          <a class="links" href="#leave-message">Leave a Message</a>
         </li>
         <li>
           <a class="links" href="#connect">Connect</a>
@@ -64,7 +75,6 @@
           </p>
         </section>
         <!-- end of about section -->
-        <!-- todo this is the new experience section -->
         <!-- start of experience section -->
         <section class="sections" id="experience">
           <h2 class="experience-header">Experience</h2>
@@ -168,8 +178,9 @@
             <!-- start of github  -->
             <a
               class="github socialMedia"
-              href="https://github.com/"
+              href="https://github.com/siminskim"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 role="img"
@@ -188,6 +199,7 @@
               class="linkedIn socialMedia"
               href="https://www.linkedin.com/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 role="img"
@@ -207,8 +219,8 @@
         <!-- end of connect section -->
         <!-- stat of section for form -->
         <section id="form-section">
-          <h2>Leave a message</h2>
-          <form action="" method="get" name="leave_message">
+          <h2 id="leave-message">Leave a message</h2>
+          <form action="#" method="get" name="leave_message">
             <!-- start of input for name -->
             <div>
               <label for="userName">User Name</label>
@@ -252,14 +264,5 @@
 
       <!-- end of container for sections -->
     </main>
-    <script type="module" src="js/index.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
