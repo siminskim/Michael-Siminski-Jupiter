@@ -99,6 +99,7 @@ async function fetchData() {
         // let project = document.createElement("li");
         // project.textContent = repository.name;
         // projectList.appendChild(project);
+        //I thought it looked better to have links that go to my projects
         let projectLink = document.createElement("a");
         projectLink.classList.add("projectLinks");
         projectLink.href = repository.html_url;
