@@ -32,7 +32,7 @@ messageForm.addEventListener("submit", handleFormData);
 function handleFormData(e) {
   e.preventDefault();
   //hide button to prevent user from adding another input
-  document.querySelector("[type='submit']").classList.add("hidden");
+  // document.querySelector("[type='submit']").classList.add("hidden");
   //can I use destructuring
   // let { userName, userEmail, message } = e.target;
   let userName = e.target.userName.value;
