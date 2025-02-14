@@ -31,16 +31,14 @@ messageForm.addEventListener("submit", handleFormData);
 
 function handleFormData(e) {
   e.preventDefault();
-  //hide button to prevent user from adding another input
-  // document.querySelector("[type='submit']").classList.add("hidden");
-  //can I use destructuring
-  // let { userName, userEmail, message } = e.target;
   let userName = e.target.userName.value;
   let userEmail = e.target.userEmail.value;
   let message = e.target.message.value;
   console.log(userEmail);
   console.log(userName);
   console.log(message);
+  messageForm.reset();
+
   displayMessage(message, userEmail, userName);
 }
 
@@ -50,20 +48,16 @@ function displayMessage(message, userEmail, userName) {
   let newMessage = document.createElement("li");
   messageSection.classList.remove("hidden");
   newMessage.innerHTML = `<a class="message-a" href="mailto:${userEmail}"> ${userName} </a><span>Wrote: ${message}</span>`;
-
   let removeButton = document.createElement("button");
   removeButton.textContent = "Remove";
   removeButton.type = "button";
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
 
-  removeButton.addEventListener("click", (e) => {
+  removeButton.addEventListener("click", () => {
     let entry = removeButton.parentNode;
     entry.remove();
-    messageSection.classList.add("hidden");
     document.querySelector("[type='submit']").classList.remove("hidden");
-    console.clear();
-    messageForm.reset();
   });
 } //end of display message function
 

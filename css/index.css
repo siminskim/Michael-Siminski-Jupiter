@@ -82,7 +82,7 @@ h1 {
 }
 h2 {
   color: var(--lightBlue);
-  margin-top: 20px;
+  margin: 20px 0px 20px 0px;
 }
 h3 {
   margin-top: 10px;
@@ -103,6 +103,9 @@ ul {
 }
 li {
   list-style: none;
+}
+#messages li {
+  margin: 10px 0px;
 }
 svg {
   border-radius: 50px;
@@ -184,12 +187,13 @@ navbar {
   display: none;
 }
 #messages {
+  border: 30px;
   text-align: center;
 }
 footer {
   color: white;
   text-align: center;
-  margin-bottom: 15px;
+  margin: 55px 0px;
 }
 /* todo media */
 /* todo media */
