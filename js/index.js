@@ -32,7 +32,7 @@ messageForm.addEventListener("submit", handleFormData);
 function handleFormData(e) {
   e.preventDefault();
   //hide button to prevent user from adding another input
-  document.querySelector("[type='submit']").classList.add("hidden");
+  // document.querySelector("[type='submit']").classList.add("hidden");
   //can I use destructuring
   // let { userName, userEmail, message } = e.target;
   let userName = e.target.userName.value;
@@ -99,6 +99,7 @@ async function fetchData() {
         // let project = document.createElement("li");
         // project.textContent = repository.name;
         // projectList.appendChild(project);
+        //I thought it looked better to have links that go to my projects
         let projectLink = document.createElement("a");
         projectLink.classList.add("projectLinks");
         projectLink.href = repository.html_url;
