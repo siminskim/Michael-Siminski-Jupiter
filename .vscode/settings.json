@@ -1,7 +1,0 @@
-{
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "files.autoSave": "onFocusChange",
-  "editor.wordWrap": "on",
-  "liveServer.settings.port": 5501
-}
